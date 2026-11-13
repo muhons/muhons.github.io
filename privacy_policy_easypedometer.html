@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Easy Pedometer (쉬운 만보기)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333333;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 36px 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            display: inline-block;
+            padding: 6px 14px;
+            font-size: 13px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-left: 6px;
+            border: 1px solid #cbd5e0;
+            background-color: #ffffff;
+            color: #4a5568;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .lang-btn.active {
+            background-color: #10B981;
+            color: #ffffff;
+            border-color: #10B981;
+        }
+        h1 {
+            font-size: 24px;
+            color: #1a202c;
+            border-bottom: 2px solid #10B981;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 18px;
+            color: #2d3748;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #4a5568;
+        }
+        ul {
+            padding-left: 22px;
+            margin-top: 6px;
+        }
+        .footer {
+            margin-top: 36px;
+            padding-top: 18px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 13px;
+            color: #718096;
+            text-align: center;
+        }
+        .section-ko { display: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btnEn" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" id="btnKo" onclick="switchLang('ko')">한국어</button>
+    </div>
+
+    <!-- ENGLISH SECTION -->
+    <div id="sectionEn" class="section-en">
+        <h1>Privacy Policy for Easy Pedometer</h1>
+        <p><strong>Effective Date:</strong> November 14, 2026</p>
+        <p><strong>Developer:</strong> muhons</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:muhons@gmail.com">muhons@gmail.com</a></p>
+
+        <p>Welcome to <strong>Easy Pedometer - Step Counter</strong> ("App"). This Privacy Policy explains how our App handles your information. Our core principle is local-first privacy: we do not require accounts, and we never upload your walking or personal data to external developer servers.</p>
+
+        <h2>1. Information We Handle (100% Local Storage)</h2>
+        <p><strong>Easy Pedometer does NOT collect, transmit, or sell personally identifiable information (PII) to developer servers.</strong></p>
+        <ul>
+            <li>No user account, registration, or login is required.</li>
+            <li>We do NOT collect names, email addresses, phone numbers, GPS location coordinates, or contacts.</li>
+            <li>Daily step counts, estimated walking distance, estimated calories, walking time, daily step goals, and optional body settings (stride length and weight used solely for local metric calculation) are stored exclusively on your own device (Android SQLite Room Database and SharedPreferences) and never leave your device.</li>
+        </ul>
+
+        <h2>2. Device Permissions Used</h2>
+        <p>The App requests only the permissions strictly necessary to measure steps accurately with low battery usage:</p>
+        <ul>
+            <li><strong>ACTIVITY_RECOGNITION (Physical Activity):</strong> Used solely to read the device's built-in low-power hardware step sensor (Step Counter / Step Detector) without GPS. Even if denied, the App can still estimate steps locally using the standard accelerometer sensor.</li>
+            <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_HEALTH:</strong> Used to keep step counting stable in the background while conserving battery.</li>
+            <li><strong>POST_NOTIFICATIONS (Optional):</strong> Used solely to display today's live step count and goal progress in the status bar notification.</li>
+            <li><strong>RECEIVE_BOOT_COMPLETED:</strong> Used to resume step counting automatically after your device reboots while preserving today's count.</li>
+            <li><strong>VIBRATE:</strong> Used solely to provide haptic feedback when you reach your daily step goal.</li>
+            <li><strong>INTERNET &amp; ACCESS_NETWORK_STATE:</strong> Used to load advertisements provided by Google AdMob.</li>
+        </ul>
+
+        <h2>3. Third-Party Advertising (Google AdMob)</h2>
+        <p>To keep the App free, it displays top-anchored adaptive banner advertisements and occasional screen-transition interstitial advertisements provided by <strong>Google AdMob</strong>. Google AdMob may collect and process pseudonymous device identifiers (such as Android Advertising ID), diagnostic data, and ad interaction data in accordance with Google's Privacy Policy for ad serving, fraud prevention, and security.</p>
+        <p>For more information on how Google uses data, please visit: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Privacy &amp; Terms</a>.</p>
+
+        <h2>4. Data Retention and Deletion</h2>
+        <p>Because all step records and settings are stored strictly locally on your device, you have full control over them. You can clear all stored step history and preferences at any time by clearing the App's storage in Android system settings or by uninstalling the App.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Our App is not directed toward children under 13 and does not knowingly collect personal information from children under 13.</p>
+
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any updates will be posted on this page with a revised effective date.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or requests regarding this Privacy Policy, please contact us at: <a href="mailto:muhons@gmail.com">muhons@gmail.com</a></p>
+    </div>
+
+    <!-- KOREAN SECTION -->
+    <div id="sectionKo" class="section-ko">
+        <h1>개인정보처리방침 - 쉬운 만보기</h1>
+        <p><strong>시행일자:</strong> 2026년 11월 14일</p>
+        <p><strong>개발자:</strong> muhons</p>
+        <p><strong>문의 이메일:</strong> <a href="mailto:muhons@gmail.com">muhons@gmail.com</a></p>
+
+        <p><strong>쉬운 만보기 - 큰글씨 걸음수 측정 &amp; 건강 기록</strong>(이하 "앱")을 이용해 주셔서 감사합니다. 본 개인정보처리방침은 앱에서 사용자의 정보가 어떻게 취급되는지 안내합니다. 본 앱은 회원가입이나 외부 서버 전송 없이 사용자 기기 내부에서만 안전하게 데이터를 처리하는 것을 최우선 원칙으로 합니다.</p>
+
+        <h2>1. 수집 및 처리하는 정보 (100% 기기 내 로컬 저장)</h2>
+        <p><strong>쉬운 만보기는 어떠한 개인 식별 정보(PII)도 개발자 서버로 수집, 저장 또는 전송하지 않습니다.</strong></p>
+        <ul>
+            <li>회원가입이나 로그인이 일절 필요하지 않습니다.</li>
+            <li>이름, 이메일, 전화번호, GPS 위치 좌표, 연락처 등 개인정보를 요구하거나 수집하지 않습니다.</li>
+            <li>일일 걸음수, 이동 거리, 소모 칼로리, 걸은 시간, 목표 걸음수 및 거리·칼로리 계산용 보폭·체중 설정값은 오직 <strong>사용자의 기기 내부(안드로이드 SQLite Room DB 및 SharedPreferences)에만 저장</strong>되며 외부로 유출되지 않습니다.</li>
+        </ul>
+
+        <h2>2. 앱에서 사용하는 기기 권한</h2>
+        <p>본 앱은 GPS 없이 초저전력으로 걸음수를 측정하기 위해 꼭 필요한 권한만 요청합니다:</p>
+        <ul>
+            <li><strong>신체 활동 권한 (ACTIVITY_RECOGNITION):</strong> GPS를 사용하지 않고 스마트폰 내장 저전력 하드웨어 걸음 센서를 읽어 걸음수를 측정하는 용도로만 사용됩니다. (권한을 허용하지 않더라도 기기 내 모션 센서 폴백으로 기본 측정을 지원합니다.)</li>
+            <li><strong>포그라운드 서비스 권한 (FOREGROUND_SERVICE, FOREGROUND_SERVICE_HEALTH):</strong> 화면이 꺼져 있거나 다른 앱을 사용하는 동안에도 걸음수 측정을 안정적으로 유지하기 위해 사용됩니다.</li>
+            <li><strong>알림 표시 권한 (POST_NOTIFICATIONS, 선택):</strong> 상단 알림바에 오늘 걸음수와 목표 달성률을 실시간으로 표시하기 위해 사용됩니다.</li>
+            <li><strong>재부팅 자동 복구 권한 (RECEIVE_BOOT_COMPLETED):</strong> 스마트폰 재부팅 이후 오늘 걸음수를 보존하고 만보기 측정을 자동 재개하기 위해 사용됩니다.</li>
+            <li><strong>진동 권한 (VIBRATE):</strong> 일일 목표 걸음수 달성 시 햅틱 진동 축하 알림을 제공하기 위해 사용됩니다.</li>
+            <li><strong>인터넷 및 네트워크 상태 접근 (INTERNET, ACCESS_NETWORK_STATE):</strong> Google AdMob 광고를 로드하기 위한 용도로만 사용됩니다.</li>
+        </ul>
+
+        <h2>3. 제3자 광고 서비스 (Google AdMob)</h2>
+        <p>본 앱은 무료 서비스 운영을 위해 화면 상단 고정 적응형 배너 광고 및 화면 전환 시 제한적 빈도(1일 1회)의 전면 광고를 <strong>Google AdMob</strong>을 통해 제공합니다. Google AdMob은 광고 제공, 부정 클릭(사기) 예방 및 보안을 위해 익명화된 기기 식별자(광고 ID 등)와 진단 정보를 구글의 개인정보처리방침에 따라 처리할 수 있습니다.</p>
+        <p>구글의 데이터 처리 방식에 대한 자세한 내용은 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">구글 광고 및 개인정보 보호정책</a>을 참고하시기 바랍니다.</p>
+
+        <h2>4. 개인정보 및 기록의 보관 및 파기</h2>
+        <p>모든 걸음 기록 및 설정 데이터는 사용자 기기 내부에만 저장되므로, 안드로이드 설정에서 앱 저장공간(데이터)을 삭제하거나 앱을 삭제하시면 기기 내 모든 데이터가 즉시 완전 파기됩니다.</p>
+
+        <h2>5. 아동의 개인정보 보호</h2>
+        <p>본 앱은 만 13세 미만 아동을 주 대상으로 하지 않으며, 만 13세 미만 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+        <h2>6. 개인정보처리방침의 변경</h2>
+        <p>본 방침은 법령이나 서비스 변경사항을 반영하기 위해 수정될 수 있으며, 변경 시 본 페이지를 통해 공지합니다.</p>
+
+        <h2>7. 문의처</h2>
+        <p>개인정보 보호와 관련하여 궁금한 점이나 의견이 있으실 경우 아래 이메일로 언제든 문의해 주시기 바랍니다:<br>
+        <a href="mailto:muhons@gmail.com"><strong>muhons@gmail.com</strong></a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 muhons. All rights reserved.
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        var secEn = document.getElementById('sectionEn');
+        var secKo = document.getElementById('sectionKo');
+        var btnEn = document.getElementById('btnEn');
+        var btnKo = document.getElementById('btnKo');
+
+        if (lang === 'ko') {
+            secEn.style.display = 'none';
+            secKo.style.display = 'block';
+            btnKo.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            secEn.style.display = 'block';
+            secKo.style.display = 'none';
+            btnEn.classList.add('active');
+            btnKo.classList.remove('active');
+        }
+    }
+</script>
+</body>
+</html>
