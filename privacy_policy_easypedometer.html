@@ -95,7 +95,7 @@
         <ul>
             <li>No user account, registration, or login is required.</li>
             <li>We do NOT collect names, email addresses, phone numbers, GPS location coordinates, or contacts.</li>
-            <li>Daily step counts, estimated walking distance, estimated calories, walking time, daily step goals, and optional body settings (stride length and weight used solely for local metric calculation) are stored exclusively on your own device (Android SQLite Room Database and SharedPreferences) and never leave your device.</li>
+            <li>Daily step counts, estimated walking distance, estimated calories, walking time, daily step goals, and optional body settings (gender, height, and weight used solely for local metric calculation) are stored exclusively on your own device (Android SQLite Room Database and SharedPreferences) and never leave your device.</li>
         </ul>
 
         <h2>2. Device Permissions Used</h2>
@@ -103,9 +103,10 @@
         <ul>
             <li><strong>ACTIVITY_RECOGNITION (Physical Activity):</strong> Used solely to read the device's built-in low-power hardware step sensor (Step Counter / Step Detector) without GPS. Even if denied, the App can still estimate steps locally using the standard accelerometer sensor.</li>
             <li><strong>FOREGROUND_SERVICE &amp; FOREGROUND_SERVICE_HEALTH:</strong> Used to keep step counting stable in the background while conserving battery.</li>
-            <li><strong>POST_NOTIFICATIONS (Optional):</strong> Used solely to display today's live step count and goal progress in the status bar notification.</li>
+            <li><strong>POST_NOTIFICATIONS:</strong> Used solely to display today's live step count and goal progress in the status bar notification.</li>
             <li><strong>RECEIVE_BOOT_COMPLETED:</strong> Used to resume step counting automatically after your device reboots while preserving today's count.</li>
             <li><strong>VIBRATE:</strong> Used solely to provide haptic feedback when you reach your daily step goal.</li>
+            <li><strong>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS:</strong> Used to keep background step counting uninterrupted by excluding the App from strict system battery optimization ("Unrestricted" mode) when allowed by the user.</li>
             <li><strong>INTERNET &amp; ACCESS_NETWORK_STATE:</strong> Used to load advertisements provided by Google AdMob.</li>
         </ul>
 
@@ -140,7 +141,7 @@
         <ul>
             <li>회원가입이나 로그인이 일절 필요하지 않습니다.</li>
             <li>이름, 이메일, 전화번호, GPS 위치 좌표, 연락처 등 개인정보를 요구하거나 수집하지 않습니다.</li>
-            <li>일일 걸음수, 이동 거리, 소모 칼로리, 걸은 시간, 목표 걸음수 및 거리·칼로리 계산용 보폭·체중 설정값은 오직 <strong>사용자의 기기 내부(안드로이드 SQLite Room DB 및 SharedPreferences)에만 저장</strong>되며 외부로 유출되지 않습니다.</li>
+            <li>일일 걸음수, 이동 거리, 소모 칼로리, 걸은 시간, 목표 걸음수 및 거리·칼로리 계산용 신체 정보(성별·키·몸무게) 설정값은 오직 <strong>사용자의 기기 내부(안드로이드 SQLite Room DB 및 SharedPreferences)에만 저장</strong>되며 외부로 유출되지 않습니다.</li>
         </ul>
 
         <h2>2. 앱에서 사용하는 기기 권한</h2>
@@ -148,9 +149,10 @@
         <ul>
             <li><strong>신체 활동 권한 (ACTIVITY_RECOGNITION):</strong> GPS를 사용하지 않고 스마트폰 내장 저전력 하드웨어 걸음 센서를 읽어 걸음수를 측정하는 용도로만 사용됩니다. (권한을 허용하지 않더라도 기기 내 모션 센서 폴백으로 기본 측정을 지원합니다.)</li>
             <li><strong>포그라운드 서비스 권한 (FOREGROUND_SERVICE, FOREGROUND_SERVICE_HEALTH):</strong> 화면이 꺼져 있거나 다른 앱을 사용하는 동안에도 걸음수 측정을 안정적으로 유지하기 위해 사용됩니다.</li>
-            <li><strong>알림 표시 권한 (POST_NOTIFICATIONS, 선택):</strong> 상단 알림바에 오늘 걸음수와 목표 달성률을 실시간으로 표시하기 위해 사용됩니다.</li>
+            <li><strong>알림 표시 권한 (POST_NOTIFICATIONS):</strong> 상단 알림바에 오늘 걸음수와 목표 달성률을 실시간으로 표시하기 위해 사용됩니다.</li>
             <li><strong>재부팅 자동 복구 권한 (RECEIVE_BOOT_COMPLETED):</strong> 스마트폰 재부팅 이후 오늘 걸음수를 보존하고 만보기 측정을 자동 재개하기 위해 사용됩니다.</li>
             <li><strong>진동 권한 (VIBRATE):</strong> 일일 목표 걸음수 달성 시 햅틱 진동 축하 알림을 제공하기 위해 사용됩니다.</li>
+            <li><strong>배터리 최적화 예외 요청 (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS):</strong> 사용자가 허용한 경우 시스템의 배터리 절전 제한으로 인해 백그라운드 걸음수 측정이 중단되지 않도록 유지(제한 없음)하기 위해 사용됩니다.</li>
             <li><strong>인터넷 및 네트워크 상태 접근 (INTERNET, ACCESS_NETWORK_STATE):</strong> Google AdMob 광고를 로드하기 위한 용도로만 사용됩니다.</li>
         </ul>
 
