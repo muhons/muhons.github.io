@@ -22,7 +22,10 @@ const I18N = {
 const APPS = [
   {
     icon: "assets/icons/easypedometer.png",
-    screenshot: "assets/screenshots/easypedometer.png",
+    screenshot: {
+      ko: "assets/screenshots/easypedometer_ko.png",
+      en: "assets/screenshots/easypedometer_en.png"
+    },
     packageId: "com.muhons.easypedometer",
     privacyUrl: "privacy_policy_easypedometer.html",
     ko: {
@@ -48,7 +51,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/easyconverter.png",
-    screenshot: "assets/screenshots/easyconverter.png",
+    screenshot: {
+      ko: "assets/screenshots/easyconverter_ko.png",
+      en: "assets/screenshots/easyconverter_en.png"
+    },
     packageId: "com.muhons.easyconverter",
     privacyUrl: "privacy_policy_easyconverter.html",
     ko: {
@@ -74,7 +80,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/ledscroll.png",
-    screenshot: "assets/screenshots/ledscroll.png",
+    screenshot: {
+      ko: "assets/screenshots/ledscroll_ko.png",
+      en: "assets/screenshots/ledscroll_en.png"
+    },
     packageId: "com.muhons.ledscroll",
     privacyUrl: "privacy_policy_ledscroll.html",
     ko: {
@@ -100,7 +109,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/smartlight.png",
-    screenshot: "assets/screenshots/smartlight.png",
+    screenshot: {
+      ko: "assets/screenshots/smartlight_ko.png",
+      en: "assets/screenshots/smartlight_en.png"
+    },
     packageId: "com.muhons.easylight",
     privacyUrl: "privacy_policy_smartlight.html",
     ko: {
@@ -126,7 +138,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/easymagnifier.png",
-    screenshot: "assets/screenshots/easymagnifier.png",
+    screenshot: {
+      ko: "assets/screenshots/easymagnifier_ko.png",
+      en: "assets/screenshots/easymagnifier_en.png"
+    },
     packageId: "com.muhons.easymagnifier",
     privacyUrl: "privacy_policy_easymagnifier.html",
     ko: {
@@ -152,7 +167,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/easycounter.png",
-    screenshot: "assets/screenshots/easycounter.png",
+    screenshot: {
+      ko: "assets/screenshots/easycounter_ko.png",
+      en: "assets/screenshots/easycounter_en.png"
+    },
     packageId: "com.muhons.easycounter",
     privacyUrl: "privacy_policy_easycounter.html",
     ko: {
@@ -178,7 +196,10 @@ const APPS = [
   },
   {
     icon: "assets/icons/easylevel.png",
-    screenshot: "assets/screenshots/easylevel.png",
+    screenshot: {
+      ko: "assets/screenshots/easylevel_ko.png",
+      en: "assets/screenshots/easylevel_en.png"
+    },
     packageId: "com.muhons.easylevel",
     privacyUrl: "privacy_policy_easylevel.html",
     ko: {
@@ -246,6 +267,7 @@ function renderApps(lang) {
   grid.innerHTML = APPS.map((app) => {
     const info = app[lang];
     const storeUrl = `https://play.google.com/store/apps/details?id=${app.packageId}`;
+    const shotUrl = typeof app.screenshot === "string" ? app.screenshot : app.screenshot[lang];
     const featuresHtml = info.features.map((f) => `<li>${f}</li>`).join("");
     return `
       <article class="app-card">
@@ -270,7 +292,7 @@ function renderApps(lang) {
           </div>
         </div>
         <div class="app-shot">
-          <img src="${app.screenshot}" alt="${info.name} screenshot" loading="lazy">
+          <img src="${shotUrl}" alt="${info.name} screenshot" loading="lazy">
         </div>
       </article>
     `;
