@@ -21,6 +21,35 @@ const I18N = {
 
 const APPS = [
   {
+    icon: "assets/icons/easyshift.png",
+    screenshot: {
+      ko: "assets/screenshots/easyshift_ko.png",
+      en: "assets/screenshots/easyshift_en.png"
+    },
+    packageId: "com.muhons.easyshift",
+    privacyUrl: "privacy_policy_easyshift.html",
+    ko: {
+      name: "쉬운 교대근무 (Easy Shift)",
+      category: "생산성 / 일정",
+      desc: "교대근무 패턴과 근무 일정을 캘린더에서 한눈에 확인하고 관리하는 앱입니다.",
+      features: [
+        "3조 2교대, 4조 3교대 등 다양한 근무 패턴 간편 설정",
+        "근무 형태별 맞춤 알람 및 위젯/캘린더 확인",
+        "커스텀 근무 유형 추가 및 일정 메모 지원"
+      ]
+    },
+    en: {
+      name: "Easy Shift",
+      category: "Productivity",
+      desc: "Manage and view your shift work patterns and schedules at a glance.",
+      features: [
+        "Easy setup for various shift rotation patterns",
+        "Custom alarms per shift type and calendar overview",
+        "Support for custom shift types and schedule notes"
+      ]
+    }
+  },
+  {
     icon: "assets/icons/easypedometer.png",
     screenshot: {
       ko: "assets/screenshots/easypedometer_ko.png",
@@ -269,6 +298,9 @@ function renderApps(lang) {
     const storeUrl = `https://play.google.com/store/apps/details?id=${app.packageId}`;
     const shotUrl = typeof app.screenshot === "string" ? app.screenshot : app.screenshot[lang];
     const featuresHtml = info.features.map((f) => `<li>${f}</li>`).join("");
+    const privacyHtml = app.privacyUrl
+      ? `<a class="link-privacy" href="${app.privacyUrl}">${t.privacy_link}</a>`
+      : "";
     return `
       <article class="app-card">
         <div class="app-main">
@@ -288,7 +320,7 @@ function renderApps(lang) {
               <span>▶</span>
               <span>${t.store_btn}</span>
             </a>
-            <a class="link-privacy" href="${app.privacyUrl}">${t.privacy_link}</a>
+            ${privacyHtml}
           </div>
         </div>
         <div class="app-shot">
