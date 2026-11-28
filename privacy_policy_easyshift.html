@@ -188,6 +188,10 @@
             btnKo.classList.remove('active');
         }
     }
+    (function () {
+        var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || 'en'];
+        if (langs.some(function (l) { return String(l).toLowerCase().indexOf('ko') === 0; })) switchLang('ko');
+    })();
 </script>
 </body>
 </html>

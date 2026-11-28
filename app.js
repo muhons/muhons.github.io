@@ -259,8 +259,10 @@ let currentLang = "ko";
 function detectLanguage() {
   const saved = localStorage.getItem("muhons_lang");
   if (saved === "ko" || saved === "en") return saved;
-  const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-  return browserLang.startsWith("ko") ? "ko" : "en";
+  const langs = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || navigator.userLanguage || "en"];
+  return langs.some((l) => String(l).toLowerCase().startsWith("ko")) ? "ko" : "en";
 }
 
 function openModal(app) {
